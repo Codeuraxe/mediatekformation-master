@@ -41,7 +41,7 @@ class FormationsController extends AbstractController {
     public function index(): Response{
         $formations = $this->formationRepository->findAll();
         $categories = $this->categorieRepository->findAll();
-        return $this->render(self::PAGES_PATH, [
+        return $this->render(PAGES_PATH, [
             'formations' => $formations,
             'categories' => $categories
         ]);
